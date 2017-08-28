@@ -1,0 +1,86 @@
+.kotak-tabs
+{
+	background-color: #000;
+	color: #fff;
+	border: 1px solid #000;
+	padding: 8px;
+}
+.btn-white
+{
+	background-color: #fff;
+	color: #000;
+	border: 1px solid #333;
+	border-radius: 5px;
+}
+
+.btn-white:hover
+{
+	color: #b1b1b1;
+}
+.sort_by
+{
+	font-weight: bold;
+	border: 1px solid #000;
+}
+.sort_by:focus
+{
+	border: 1px solid #000;
+	box-shadow: none;
+}
+.pg-product
+{
+	box-shadow: none;
+	border-radius: none;
+	border: 1px solid;
+}
+
+.pg-product .active a
+{
+	background-color: #000;
+	border: 1px solid #000;
+}
+
+.pg-product .active a:hover
+{
+	background-color: #000;
+	border: 1px solid #000;
+}
+
+.pg-product li a
+{
+	color: #000;
+}
+
+.jarak li a
+{
+	border: 1px solid #000;
+}
+.text-hijau
+{
+	color: green;
+	font-weight: bold;
+}
+.text-abu
+{
+	font-weight: bold;
+	color: #b1b1b1;
+}
+.header
+{
+	border: 1px solid #bbb;
+}
+.brand
+{
+	margin-top: -90px;
+	margin-left: 50px;
+}
+.text-yellow
+{
+	color: #FFA200;
+	text-transform: uppercase;
+	font-size: 1.5em
+}
+.task tr td
+{
+	padding-left: 40px;
+}

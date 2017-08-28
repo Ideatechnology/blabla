@@ -1,0 +1,330 @@
+body,html{
+    overflow-x: hidden;
+}
+/* responsive Extra small devices Phones  */
+@media (max-width: 778px) {
+    .keranjang-image img{
+        width: 120px;
+    }
+    .judul-website{
+        font-size: 20px;
+    }
+    .dokumen_section .konten-dokumen {
+        padding-top: 20px;
+    }
+    .berita_konsultasi .panel-default {
+            margin-top: 20px !important;
+    margin-left: 0px;
+    margin-right: 0px;
+    }
+
+    #map{
+    width:100%;
+     height:250px;
+}
+.kotak_tentang_kami{
+    background:#E5E5E5;margin-left:0;padding:30px 20px 20px 40px;height:auto;
+}
+
+
+.sidebaroduk{
+    display: none;
+}
+.kotak-most-wanted .thumbnail .caption {
+    padding: 9px;
+    color: #333;
+    height: 150px;
+    max-height: 150px;
+}
+.sidebar-produk{
+    background: #fff;padding-top:0px !important;padding-bottom: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+    .section_gallery {
+    margin-top: 10px !important;
+    margin-bottom: 15px !important;
+}
+.produk-moswanted-category{
+    padding-right: 0px;
+        padding-left: 0px;
+}
+.produk-moswanted-category .caption{
+border-top:0px solid #ddd;margin-top:10px;height:auto;
+}
+}
+@media (max-width: 767px) {
+    .produk-moswanted-category .col-xs-6{
+        padding-right: 5px;
+        padding-left: 5px;
+
+    }
+.section_gallery .gambar_euy {
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: 430px;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+    td.keranjang-jumlah-customer{
+        vertical-align: middle !important
+    }
+
+    .keranjang-image{
+        float:inherit !important;
+        text-align: center;
+        margin:auto;
+    }
+
+    .keranjang-image img{
+        float:inherit !important;
+        text-align: center;
+        margin:auto;
+    }
+    h1{
+            font-size: 26px;
+            color:#9d883e;
+    }
+.btn-group-xs>.btn, .btn-xs {
+    padding: 2px 8px;
+    font-size: 17px;
+    float: left;
+    margin-right: 2px;
+    line-height: 1.5;
+    border-radius: 3px;
+}
+.list-produk a{
+    float: inherit;
+    text-align: center;
+    }
+.list-produk img{
+           margin: auto;
+    margin-bottom: 10px;
+    text-align: center;
+    min-width: 300px !important;
+
+}
+.h-kategori{
+position: relative;margin-bottom: 0px;
+}
+.judul_kategori{
+    word-wrap: break-word;
+    word-break: break-all;
+        font-size: 20px;
+    display: block;
+}
+.kotak-most-wanted-gender{
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    background: #fff;
+}
+.breadcrumb{
+    margin-bottom:0px;
+}
+.custom-xs-button {
+    
+    padding: 0px;
+
+}
+    .produk-moswanted .col-xs-6{
+        padding-left: 3px;
+        padding-right: 3px;
+    }
+ .produk-moswanted .thumbnail{
+        margin-bottom: 10px;
+}
+        .navbar-fixed-top{
+            padding-bottom: 10px;
+        }
+        .produk-moswanted p{
+                font-size: 12px;
+        }
+        .nav_menu_utama .navbar-brand>img {
+    padding: 15px;
+    margin-top: -20px;
+    width: 130px;
+}
+
+     h4{
+        font-size: 15px;
+    }
+
+    table td{
+        font-size: 13px;
+
+    }
+
+    .produk-moswanted .thumbnail h3 {
+    color: #9d883e;
+    font-size: 14px;
+}
+
+    .btn {
+        font-size: 11px;
+    }
+
+    .footer-menu{
+    margin-top: 5px;
+}
+#kotak-cart-register,.nav_menu_utama{
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+}
+.footer-menu .nav>li>a {
+    
+    padding: 4px 0px;
+    font-size: 12px;
+    color:#d2c9c9;
+}
+.produk-moswanted {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.nav_menu_utama .navbar-brand{
+    margin-left: 20px;
+}
+
+.nav_menu_utama .navbar-toggle{
+    margin-right: 30px !important;
+}
+
+.nav_menu_top .input-group{
+    width:100%;
+}
+
+.logo{
+	text-align: center;
+}
+
+.dropdown-menucart{
+left: -100px;
+}
+
+.dropdown-menusosmed{
+left: -50px;
+}
+
+.sosmed_ul{
+float: inherit !important;
+    display: table;
+    text-align: center;
+    margin: auto !important;
+}
+.kotak-most-wanted h2 {
+    font-size: 20px;
+    text-align: center;
+    float: inherit !important;
+}
+
+
+.kotak-most-wanted .nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
+    margin-right: 0px; 
+    cursor: default;
+    color: #fff;
+    background-color: #9d883e;
+    border: 1px solid #ddd;
+    border-bottom-color: transparent;
+}
+.kotak-most-wanted .nav-tabs>li>a {
+    margin-right: 0px;
+    line-height: 1.42857143;
+    font-size: 10px;
+    padding-left: 8px;
+    padding-right: 8px;
+    border: 1px solid #ccc;
+    border-radius: 0px 0px 0 0;
+}
+.kotak-most-wanted .nav-tabs {
+    margin-top: 20px;
+    float: inherit !important; 
+   
+   	 border-bottom: 0px solid #ddd;
+}
+
+.kotak-most-wanted   ul.nav-tabs {
+    display: table;
+    margin: 0 auto;
+}
+
+.judul_out_product{
+	text-align: center
+}
+.deal-week-left-kotak{
+	min-height: 360px;
+	height: auto;
+}
+
+.kotak-deal-week h2 {
+    font-size: 20px;
+    margin-left: 10px;
+    margin-bottom: 30px;
+
+}
+
+.kotak-deal-week .navigasi {
+    margin-right: 10px;
+}
+
+.produk-moswanted .col-md-4:nth-child(2n+2) {
+    padding-right: 0px;
+}
+
+.produk-moswanted .col-md-4:nth-child(1n+1) {
+    padding-right: 0px;
+}
+
+.nav-pills.nav-wizard > li.active a {
+    background-color: #b9a560;
+    font-size: 11px;
+}
+
+.nav-pills.nav-wizard > li a {
+    border-radius: 0;
+    background-color: #eee;
+    font-size: 11px;
+}
+
+
+}
+/* responsive Small devices Tablets   */
+
+@media (min-width: 768px) and (max-width:768px) { 
+.logo img{
+	width:100px;
+}
+.logo {
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+.sosmed_ul{
+float: right;
+}
+
+.form-cari {
+    width: 100% !important;
+}
+
+.produk-moswanted .col-md-4:nth-child(3n+3) {
+    padding-right: 15px;
+}
+
+}
+/* responsive Medium devices Desktops    */
+
+@media (min-width: 992px) and (max-width: 992px) { 
+.form-cari {
+    width: 400px !important;
+}
+
+
+}
+
+/* responsive Large devices Desktops     */
+@media (min-width: 1200px) { 
+.form-cari {
+    width: 100% !important;
+}
+ }

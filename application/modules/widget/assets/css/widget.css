@@ -1,0 +1,59 @@
+
+.column{
+  	min-height:300px;
+	background:#fff;
+    float: left;
+ 	overflow-y: hidden; 
+   }
+.column .dragbox{
+	margin:5px 2px  20px;
+	background:#fff;
+	position:relative;
+	border:1px solid #ddd;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+ 	width: 240px; 
+	float: left; 
+	margin: 1em; 
+}
+
+.column .control {
+ 	float: left; 
+	margin: 1em;
+	display:block;
+	padding-right:4px;
+}
+.column .dragbox h2{
+	margin:0;
+	font-size:12px;
+	padding:5px;
+	background: #ffffff; /* Old browsers */
+	background: -moz-linear-gradient(top,  #ffffff 0%, #f6f6f6 47%, #ededed 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(47%,#f6f6f6), color-stop(100%,#ededed)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #ffffff 0%,#f6f6f6 47%,#ededed 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #ffffff 0%,#f6f6f6 47%,#ededed 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #ffffff 0%,#f6f6f6 47%,#ededed 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #ffffff 0%,#f6f6f6 47%,#ededed 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ededed',GradientType=0 ); /* IE6-9 */
+ 	color:#000;
+	border-bottom:1px solid #eee;
+	cursor:move;
+	font-weight:bold;
+}
+.dragbox-content{
+	background:#fff;
+	min-height:100px; margin:5px;
+	
+}
+.column  .placeholder{
+	background: #f0f0f0;
+	border:1px dashed #ddd;
+}
+.dragbox h2.collapse{
+	background:#f0f0f0 url('collapse.png') no-repeat top right;
+}
+.dragbox h2 .configure{
+	font-size:11px; font-weight:normal;
+	margin-right:30px; float:right;
+}
+
