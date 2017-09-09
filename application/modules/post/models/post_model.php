@@ -222,7 +222,46 @@ class Post_model extends BF_Model {
 		return $records;
 
 	}
+
+
+	public function post_all($offset,$limit,$order_by){
+
+
+		$field=$this->field_multi_bahasa($this->bahasa());	
+		
+		$this->db->select($this->table_name.'.*, '.$this->table_name_kategori.'.'.$field[3].' as kategori_bahasa,'
+		.$this->table_name.".".$field[0]." as judul_post_bahasa,".$this->table_name.".".$field[1]." as slug_judul_post_bahasa,"
+		.$this->table_name.".".$field[2]." as isi_post_bahasa");
+		$this->db->where($this->table_name.".deleted",0);	
+		$this->db->where($this->table_name.".status_tampil",0);			
+		$this->db->join($this->table_name_kategori,$this->table_name_kategori.'.id='.$this->table_name.'.post_category');
+		$this->db->order_by($this->table_name.".".$order_by,"desc");
+		
+		$records = $this->db->get($this->table_name,$limit,$offset);
+
+		return $records;
+	}
 	
+	public function post_categories($id_kategori,$offset,$limit){
+
+
+		$field=$this->field_multi_bahasa($this->bahasa());	
+		
+
+		$this->db->select($this->table_name.'.*, '.$this->table_name_kategori.'.'.$field[3].' as kategori_bahasa,'
+		.$this->table_name.".".$field[0]." as judul_post_bahasa,".$this->table_name.".".$field[1]." as slug_judul_post_bahasa,"
+		.$this->table_name.".".$field[2]." as isi_post_bahasa");
+		$this->db->where($this->table_name.".post_category",$id_kategori);
+		$this->db->where($this->table_name.".deleted",0);	
+		$this->db->where($this->table_name.".status_tampil",0);			
+		$this->db->join($this->table_name_kategori,$this->table_name_kategori.'.id='.$this->table_name.'.post_category');
+		$this->db->order_by($this->table_name.".created_on","desc");
+		
+		$records = $this->db->get($this->table_name,$limit,$offset);
+
+		return $records;
+	}
+
 	/**
 	 * Query untuk select join kategori trash
 	 *

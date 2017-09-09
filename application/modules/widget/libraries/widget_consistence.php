@@ -79,9 +79,7 @@ class Widget_consistence
 		$bulan = date("m");
 		$tahun = date("Y");
 
-		$running_text = $this->CI->db->query("SELECT * FROM `bf_scrolltext` where flag_scroll=1")->row();
-        Template::set("running_text",$running_text);
-
+		
 		
 		$statistikperhari=$this->CI->db->query("select count(*) as jumlah from bf_activities where DATE_FORMAT(created_on,'%d')='".$hari."'")->row();
 		Template::set("statistikperhari",$statistikperhari->jumlah);

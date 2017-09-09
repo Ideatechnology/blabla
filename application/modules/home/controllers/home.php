@@ -90,79 +90,40 @@ class Home extends CI_Controller
 		$this->load->model("post/post_model");
 		$this->load->model("kategori/kategori_model");
     
-		
-		$news_nasional=$this->db->query("select * from bf_post_meta where deleted=0 and status_tampil=0 and post_category=77 order by created_on desc 
-		limit 4")->result();
-		Template::set("news_nasional",$news_nasional);
-
-		$news_daerah=$this->db->query("select * from bf_post_meta where deleted=0 and status_tampil=0 and post_category=81 order by created_on desc 
-		limit 4")->result();
-		Template::set("news_daerah",$news_daerah);
-
-		$news_kemendagri=$this->db->query("select * from bf_post_meta where deleted=0 and status_tampil=0 and post_category=43 order by created_on desc 
-		limit 4")->result();
-		Template::set("news_kemendagri",$news_kemendagri);
-
-
-		$artikel=$this->db->query("select * from bf_post_meta where deleted=0 and status_tampil=0 and post_category=93 order by created_on desc 
-		limit 5")->result();
-		Template::set("artikel",$artikel);
-
-
-		$video=$this->db->query("select * from bf_multimedia where flag=1 order by id desc limit 1")->result_array();
-		Template::set("video",$video);
-		
-
-		
-		$gallery=$this->db->query("SELECT * FROM bf_galeri_foto a 
-								order by a.id desc limit 10 ")->result();
-		Template::set("gallery",$gallery);
-
-	
-
-	
-
-		$gallery_portal=$this->db->query("SELECT * FROM bf_galeri_foto a 
-								where flag=1
-								group by a.id_album 
-								order by a.id desc limit 7")->result();
-		Template::set("gallery_portal",$gallery_portal);
-		
-		
-		
-		
-		$gs = $this->db->query("select bf_album_foto.*,
-								bf_album_foto.id as id_kategori,
-	   							bf_galeri_foto.title_foto,
-								bf_galeri_foto.file_foto,
-								(select count(*) from
-								bf_galeri_foto where
-								bf_galeri_foto.id_album=bf_album_foto.id) as jumgaleri
-								from bf_album_foto
-								left join bf_galeri_foto on
-								bf_galeri_foto.id_album=bf_album_foto.id
-								where bf_album_foto.type_kategori='galleri'
-								and title_foto!=''
-								group by bf_album_foto.id
-								order by bf_galeri_foto.id desc,bf_album_foto.id desc
-								limit 0,7")->result();
-		Template::set("gs",$gs);
-
 		$this->load->model("slide/slide_model");
 		$slide = $this->slide_model->getSlider(6);
 		Template::set("slide",$slide);
 
+		$redaksi = $this->post_model->post_categories(107,0,4)->result();
+		Template::set("redaksi",$redaksi);
 
-		
-		
-		$produk_hukum = $this->db->order_by("id","desc")
-								 ->limit(5,0)
-								 ->get("arsip")->result();
-		Template::set("produk_hukum",$produk_hukum);
+		$editorial = $this->post_model->post_categories(104,0,4)->result();
+		Template::set("editorial",$editorial);
 
-		$publikasi = $this->db->order_by("id_publikasi","desc")->limit(20)->get("publikasi")->result();
-		Template::set("publikasi",$publikasi);
-		
+		$saripati = $this->post_model->post_categories(103,0,4)->result();
+		Template::set("saripati",$saripati);
+
+		$artikel_penelitian = $this->post_model->post_categories(98,0,4)->result();
+		Template::set("artikel_penelitian",$artikel_penelitian);
+
+		$artikel_konsep = $this->post_model->post_categories(99,0,4)->result();
+		Template::set("artikel_konsep",$artikel_konsep);
+
+		$fokus = $this->post_model->post_categories(102,0,4)->result();
+		Template::set("fokus",$fokus);
+
+		$studikasus = $this->post_model->post_categories(101,0,4)->result();
+		Template::set("studikasus",$studikasus);
+
+		$penyegarankompetensi = $this->post_model->post_categories(105,0,4)->result();
+		Template::set("penyegarankompetensi",$penyegarankompetensi);
+
+		$kolom = $this->post_model->post_categories(97,0,4)->result();
+		Template::set("kolom",$kolom);
+
+		$berita_terbaru = $this->post_model->post_all(0,1,"created_on")->row();
+		Template::set("berita_terbaru",$berita_terbaru);
+
 		Template::set_view('home');
 		Template::render();
 

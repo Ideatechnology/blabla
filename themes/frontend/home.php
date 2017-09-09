@@ -111,31 +111,32 @@ nyeri pinggang pada pasien batu ginjal dan ureter batu membutuhkan obat cepat da
 <h4>Dari Redaksi <i class="fa fa-angle-right pull-right"></i></h4>
 <hr />
 
+<?php if($redaksi): ?>
+  <?php foreach($redaksi as $redaksi_row): ?>
 <div class="media">
            
       <div class="media-body">
-        <h4 class="media-heading"> <a  href="#">
-      Waspadai Virus Zika</a>
+        <h4 class="media-heading"> <a  href="<?php echo site_url("blog/".$redaksi_row->id."-".url_title($redaksi_row->judul));?>">
+      <?php echo $redaksi_row->judul;?></a>
       </h4>
         <p>
 
           <i class="fa fa-user"></i>
-      <span itemprop="name">Website Administrator</span> 
+      <span itemprop="name"><?php echo $redaksi_row->author;?></span> 
 
-       <i class="fa fa-folder"></i>
-                  <span itemprop="genre">Edisi No 10 Vol XLII - 2016</span>
        
- <i class="icon-calendar"></i>
+ <i class="fa fa-calendar"></i>
         <time datetime="2016-11-03T05:55:33+00:00" itemprop="datePublished">
-          03 November 2016        </time>
+          <?php echo date("d M Y H:i",strtotime($redaksi_row->created_on));?>      </time>
        </p>
       </div>
     </div>
-
+      <?php endforeach; ?>
+<?php endif; ?>
 
 
     </div>
-    <div class="panel-footer"><a href="" class="btn btn-warning">+ Selengkapnya</a></div>
+    <div class="panel-footer"><a href="<?php echo site_url("post/107-dari-redaksi");?>" class="btn btn-warning">+ Selengkapnya</a></div>
     </div>
 
 </div>
@@ -148,29 +149,31 @@ nyeri pinggang pada pasien batu ginjal dan ureter batu membutuhkan obat cepat da
 <h4>Editorial <i class="fa fa-angle-right pull-right"></i></h4>
 <hr />
 
+<?php if($editorial): ?>
+  <?php foreach($editorial as $redaksi_row): ?>
 <div class="media">
            
       <div class="media-body">
-        <h4 class="media-heading"> <a  href="#">
-      Problematika Kesehatan Wanita Usia Lanjut</a>
+        <h4 class="media-heading"> <a  href="<?php echo site_url("blog/".$redaksi_row->id."-".url_title($redaksi_row->judul));?>">
+      <?php echo $redaksi_row->judul;?></a>
       </h4>
         <p>
 
           <i class="fa fa-user"></i>
-      <span itemprop="name">Website Administrator</span> 
+      <span itemprop="name"><?php echo $redaksi_row->author;?></span> 
 
-       <i class="fa fa-folder"></i>
-                  <span itemprop="genre">Edisi No 10 Vol XLII - 2016</span>
        
- <i class="icon-calendar"></i>
+ <i class="fa fa-calendar"></i>
         <time datetime="2016-11-03T05:55:33+00:00" itemprop="datePublished">
-          03 November 2016        </time>
+          <?php echo date("d M Y H:i",strtotime($redaksi_row->created_on));?>      </time>
        </p>
       </div>
     </div>
+        <?php endforeach; ?>
+<?php endif; ?>
 
 </div>
- <div class="panel-footer"><a href="" class="btn btn-warning">+ Selengkapnya</a></div>
+ <div class="panel-footer"><a href="<?php echo site_url("post/104-editorial");?>" class="btn btn-warning">+ Selengkapnya</a></div>
 
 </div>
 
@@ -188,29 +191,31 @@ nyeri pinggang pada pasien batu ginjal dan ureter batu membutuhkan obat cepat da
 <h4>Saripati <i class="fa fa-angle-right pull-right"></i></h4>
 <hr />
 
+<?php if($saripati): ?>
+  <?php foreach($saripati as $redaksi_row): ?>
 <div class="media">
            
       <div class="media-body">
-        <h4 class="media-heading"> <a  href="#">
-      Problematika Kesehatan Wanita Usia Lanjut</a>
+        <h4 class="media-heading"> <a  href="<?php echo site_url("blog/".$redaksi_row->id."-".url_title($redaksi_row->judul));?>">
+      <?php echo $redaksi_row->judul;?></a>
       </h4>
         <p>
 
-          <i class="fa fa-user"></i>
-      <span itemprop="name">Website Administrator</span> 
+           <i class="fa fa-user"></i>
+      <span itemprop="name"><?php echo $redaksi_row->author;?></span> 
 
-       <i class="fa fa-folder"></i>
-                  <span itemprop="genre">Edisi No 10 Vol XLII - 2016</span>
        
- <i class="icon-calendar"></i>
+ <i class="fa fa-calendar"></i>
         <time datetime="2016-11-03T05:55:33+00:00" itemprop="datePublished">
-          03 November 2016        </time>
+          <?php echo date("d M Y H:i",strtotime($redaksi_row->created_on));?>      </time>
        </p>
       </div>
     </div>
+         <?php endforeach; ?>
+<?php endif; ?>
 
 </div>
- <div class="panel-footer"><a href="" class="btn btn-warning">+ Selengkapnya</a></div>
+ <div class="panel-footer"><a href="<?php echo site_url("post/103-saripati");?>" class="btn btn-warning">+ Selengkapnya</a></div>
 
 </div>
 
@@ -221,29 +226,32 @@ nyeri pinggang pada pasien batu ginjal dan ureter batu membutuhkan obat cepat da
   <div class="panel-body artikel-body">
 <h4>Artikel Penelitian  <i class="fa fa-angle-right pull-right"></i></h4>
 <hr />
+<?php if($artikel_penelitian): ?>
+  <?php foreach($artikel_penelitian as $redaksi_row): ?>
 <div class="media">
            
+
       <div class="media-body">
-        <h4 class="media-heading"> <a  href="#">
-      Problematika Kesehatan Wanita Usia Lanjut</a>
+        <h4 class="media-heading"> <a  href="<?php echo site_url("blog/".$redaksi_row->id."-".url_title($redaksi_row->judul));?>">
+      <?php echo $redaksi_row->judul;?></a>
       </h4>
         <p>
 
-          <i class="fa fa-user"></i>
-      <span itemprop="name">Website Administrator</span> 
+           <i class="fa fa-user"></i>
+      <span itemprop="name"><?php echo $redaksi_row->author;?></span> 
 
-       <i class="fa fa-folder"></i>
-                  <span itemprop="genre">Edisi No 10 Vol XLII - 2016</span>
        
- <i class="icon-calendar"></i>
+ <i class="fa fa-calendar"></i>
         <time datetime="2016-11-03T05:55:33+00:00" itemprop="datePublished">
-          03 November 2016        </time>
+          <?php echo date("d M Y H:i",strtotime($redaksi_row->created_on));?>      </time>
        </p>
       </div>
     </div>
+    <?php endforeach; ?>
+<?php endif; ?>
 
 </div>
- <div class="panel-footer"><a href="" class="btn btn-warning">+ Selengkapnya</a></div>
+ <div class="panel-footer"><a href="<?php echo site_url("post/98-artikel-penelitian");?>" class="btn btn-warning">+ Selengkapnya</a></div>
 
 </div>
 
@@ -258,29 +266,33 @@ nyeri pinggang pada pasien batu ginjal dan ureter batu membutuhkan obat cepat da
 <h4>Artikel Konsep  <i class="fa fa-angle-right pull-right"></i></h4>
 <hr />
 
+
+<?php if($artikel_konsep): ?>
+  <?php foreach($artikel_konsep as $redaksi_row): ?>
 <div class="media">
            
       <div class="media-body">
-        <h4 class="media-heading"> <a  href="#">
-      Problematika Kesehatan Wanita Usia Lanjut</a>
+        <h4 class="media-heading"> <a  href="<?php echo site_url("blog/".$redaksi_row->id."-".url_title($redaksi_row->judul));?>">
+       <?php echo $redaksi_row->judul;?></a>
       </h4>
         <p>
 
-          <i class="fa fa-user"></i>
-      <span itemprop="name">Website Administrator</span> 
+            <i class="fa fa-user"></i>
+      <span itemprop="name"><?php echo $redaksi_row->author;?></span> 
 
-       <i class="fa fa-folder"></i>
-                  <span itemprop="genre">Edisi No 10 Vol XLII - 2016</span>
        
- <i class="icon-calendar"></i>
+ <i class="fa fa-calendar"></i>
         <time datetime="2016-11-03T05:55:33+00:00" itemprop="datePublished">
-          03 November 2016        </time>
+          <?php echo date("d M Y H:i",strtotime($redaksi_row->created_on));?>      </time>
        </p>
       </div>
     </div>
+     <?php endforeach; ?>
+<?php endif; ?>
 
 </div>
- <div class="panel-footer"><a href="" class="btn btn-warning">+ Selengkapnya</a></div>
+
+ <div class="panel-footer"><a href="<?php echo site_url("post/99-artikel-konsep");?>" class="btn btn-warning">+ Selengkapnya</a></div>
 
 </div>
 
@@ -293,29 +305,31 @@ nyeri pinggang pada pasien batu ginjal dan ureter batu membutuhkan obat cepat da
 <h4>Fokus   <i class="fa fa-angle-right pull-right"></i></h4>
 <hr />
 
+<?php if($fokus): ?>
+  <?php foreach($fokus as $redaksi_row): ?>
 <div class="media">
            
       <div class="media-body">
-        <h4 class="media-heading"> <a  href="#">
-      Problematika Kesehatan Wanita Usia Lanjut</a>
+        <h4 class="media-heading"> <a  href="<?php echo site_url("blog/".$redaksi_row->id."-".url_title($redaksi_row->judul));?>">
+      <?php echo $redaksi_row->judul;?></a>
       </h4>
         <p>
 
-          <i class="fa fa-user"></i>
-      <span itemprop="name">Website Administrator</span> 
+           <i class="fa fa-user"></i>
+      <span itemprop="name"><?php echo $redaksi_row->author;?></span> 
 
-       <i class="fa fa-folder"></i>
-                  <span itemprop="genre">Edisi No 10 Vol XLII - 2016</span>
        
- <i class="icon-calendar"></i>
+ <i class="fa fa-calendar"></i>
         <time datetime="2016-11-03T05:55:33+00:00" itemprop="datePublished">
-          03 November 2016        </time>
+          <?php echo date("d M Y H:i",strtotime($redaksi_row->created_on));?>      </time>
        </p>
       </div>
     </div>
+       <?php endforeach; ?>
+<?php endif; ?>
 
 </div>
- <div class="panel-footer"><a href="" class="btn btn-warning">+ Selengkapnya</a></div>
+ <div class="panel-footer"><a href="<?php echo site_url("post/102-fokus");?>" class="btn btn-warning">+ Selengkapnya</a></div>
 
 </div>
 
@@ -330,31 +344,32 @@ nyeri pinggang pada pasien batu ginjal dan ureter batu membutuhkan obat cepat da
   <div class="panel-body artikel-body">
 <h4>Studi Kasus    <i class="fa fa-angle-right pull-right"></i></h4>
 <hr />
-
+<?php if($studikasus): ?>
+  <?php foreach($studikasus as $redaksi_row): ?>
 <div class="media">
            
       <div class="media-body">
-        <h4 class="media-heading"> <a  href="#">
-      Problematika Kesehatan Wanita Usia Lanjut</a>
+        <h4 class="media-heading"> <a  href="<?php echo site_url("blog/".$redaksi_row->id."-".url_title($redaksi_row->judul));?>">
+       <?php echo $redaksi_row->judul;?></a>
       </h4>
         <p>
 
-          <i class="fa fa-user"></i>
-      <span itemprop="name">Website Administrator</span> 
+         
+           <i class="fa fa-user"></i>
+      <span itemprop="name"><?php echo $redaksi_row->author;?></span> 
 
-       <i class="fa fa-folder"></i>
-                  <span itemprop="genre">Edisi No 10 Vol XLII - 2016</span>
        
- <i class="icon-calendar"></i>
+ <i class="fa fa-calendar"></i>
         <time datetime="2016-11-03T05:55:33+00:00" itemprop="datePublished">
-          03 November 2016        </time>
+          <?php echo date("d M Y H:i",strtotime($redaksi_row->created_on));?>      </time>
        </p>
       </div>
     </div>
-
+ <?php endforeach; ?>
+<?php endif; ?>
 
 </div>
- <div class="panel-footer"><a href="" class="btn btn-warning">+ Selengkapnya</a></div>
+ <div class="panel-footer"><a href="<?php echo site_url("post/101-studi-kasus");?>" class="btn btn-warning">+ Selengkapnya</a></div>
 
 </div>
 
@@ -367,29 +382,32 @@ nyeri pinggang pada pasien batu ginjal dan ureter batu membutuhkan obat cepat da
 <h4>Penyegaran Kompetensi     <i class="fa fa-angle-right pull-right"></i></h4>
 <hr />
 
+<?php if($penyegarankompetensi): ?>
+  <?php foreach($penyegarankompetensi as $redaksi_row): ?>
 <div class="media">
            
       <div class="media-body">
-        <h4 class="media-heading"> <a  href="#">
-      Problematika Kesehatan Wanita Usia Lanjut</a>
+        <h4 class="media-heading"> <a  href="<?php echo site_url("blog/".$redaksi_row->id."-".url_title($redaksi_row->judul));?>">
+      <?php echo $redaksi_row->judul;?></a>
       </h4>
         <p>
 
-          <i class="fa fa-user"></i>
-      <span itemprop="name">Website Administrator</span> 
+        
+           <i class="fa fa-user"></i>
+      <span itemprop="name"><?php echo $redaksi_row->author;?></span> 
 
-       <i class="fa fa-folder"></i>
-                  <span itemprop="genre">Edisi No 10 Vol XLII - 2016</span>
        
- <i class="icon-calendar"></i>
+ <i class="fa fa-calendar"></i>
         <time datetime="2016-11-03T05:55:33+00:00" itemprop="datePublished">
-          03 November 2016        </time>
+          <?php echo date("d M Y H:i",strtotime($redaksi_row->created_on));?>      </time>
        </p>
       </div>
     </div>
+    <?php endforeach; ?>
+<?php endif; ?>
 
 </div>
- <div class="panel-footer"><a href="" class="btn btn-warning">+ Selengkapnya</a></div>
+ <div class="panel-footer"><a href="<?php echo site_url("post/105-penyegaran-kompetensi");?>" class="btn btn-warning">+ Selengkapnya</a></div>
    
 </div>
 
@@ -402,51 +420,33 @@ nyeri pinggang pada pasien batu ginjal dan ureter batu membutuhkan obat cepat da
   <div class="panel-body artikel-body">
 <h4>Kolom     <i class="fa fa-angle-right pull-right"></i></h4>
 <hr />
-
+<?php if($kolom): ?>
+  <?php foreach($kolom as $redaksi_row): ?>
 <div class="media">
            
       <div class="media-body">
-        <h4 class="media-heading"> <a  href="#">
-      Waspadai Virus Zika</a>
+        <h4 class="media-heading"> <a  href="<?php echo site_url("blog/".$redaksi_row->id."-".url_title($redaksi_row->judul));?>">
+      <?php echo $redaksi_row->judul;?></a>
       </h4>
         <p>
 
-          <i class="fa fa-user"></i>
-      <span itemprop="name">Website Administrator</span> 
+         
+           <i class="fa fa-user"></i>
+      <span itemprop="name"><?php echo $redaksi_row->author;?></span> 
 
-       <i class="fa fa-folder"></i>
-                  <span itemprop="genre">Edisi No 10 Vol XLII - 2016</span>
        
- <i class="icon-calendar"></i>
+ <i class="fa fa-calendar"></i>
         <time datetime="2016-11-03T05:55:33+00:00" itemprop="datePublished">
-          03 November 2016        </time>
+          <?php echo date("d M Y H:i",strtotime($redaksi_row->created_on));?>      </time>
        </p>
       </div>
     </div>
 
-    <div class="media">
-           
-      <div class="media-body">
-        <h4 class="media-heading"> <a  href="#">
-      Waspadai Virus Zika</a>
-      </h4>
-        <p>
-
-          <i class="fa fa-user"></i>
-      <span itemprop="name">Website Administrator</span> 
-
-       <i class="fa fa-folder"></i>
-                  <span itemprop="genre">Edisi No 10 Vol XLII - 2016</span>
-       
- <i class="icon-calendar"></i>
-        <time datetime="2016-11-03T05:55:33+00:00" itemprop="datePublished">
-          03 November 2016        </time>
-       </p>
-      </div>
-    </div>
+      <?php endforeach; ?>
+<?php endif; ?>
 
     </div>
-     <div class="panel-footer"><a href="" class="btn btn-warning">+ Selengkapnya</a></div>
+     <div class="panel-footer"><a href="<?php echo site_url("post/97-kolom");?>" class="btn btn-warning">+ Selengkapnya</a></div>
    
     </div>
 
