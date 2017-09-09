@@ -23,7 +23,7 @@
 
 	<link rel="stylesheet" type="text/css" href="<?php echo Template::theme_url('css/sb-admin.css'); ?>" media="screen" />
 
-<link rel="icon" href="<?php echo Template::theme_url("icon/logo-footer.png");?>" sizes="16x21" type="image/png">
+<link rel="icon" href="<?php echo Template::theme_url("icon/favicon.ico");?>" sizes="16x21" type="image/png">
    
 	
 	

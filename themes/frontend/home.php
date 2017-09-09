@@ -97,50 +97,372 @@ nyeri pinggang pada pasien batu ginjal dan ureter batu membutuhkan obat cepat da
 
 </div>
 
+<!-- banner iklan -->
+<center>
+<img src="<?php echo Template::theme_url("img/Baner-tengah-ok.gif");?>" class="img-responsive" style="width:100%">
+</center>
+<br />
+<div class="row">
+
+<div class="col-md-6">
+
+<div class="panel panel-default">
+  <div class="panel-body artikel-body">
+<h4>Dari Redaksi <i class="fa fa-angle-right pull-right"></i></h4>
+<hr />
+
+<div class="media">
+           
+      <div class="media-body">
+        <h4 class="media-heading"> <a  href="#">
+      Waspadai Virus Zika</a>
+      </h4>
+        <p>
+
+          <i class="fa fa-user"></i>
+      <span itemprop="name">Website Administrator</span> 
+
+       <i class="fa fa-folder"></i>
+                  <span itemprop="genre">Edisi No 10 Vol XLII - 2016</span>
+       
+ <i class="icon-calendar"></i>
+        <time datetime="2016-11-03T05:55:33+00:00" itemprop="datePublished">
+          03 November 2016        </time>
+       </p>
+      </div>
+    </div>
+
+
+
+    </div>
+    <div class="panel-footer"><a href="" class="btn btn-warning">+ Selengkapnya</a></div>
+    </div>
+
+</div>
+
+
+<div class="col-md-6">
+
+<div class="panel panel-default">
+  <div class="panel-body artikel-body">
+<h4>Editorial <i class="fa fa-angle-right pull-right"></i></h4>
+<hr />
+
+<div class="media">
+           
+      <div class="media-body">
+        <h4 class="media-heading"> <a  href="#">
+      Problematika Kesehatan Wanita Usia Lanjut</a>
+      </h4>
+        <p>
+
+          <i class="fa fa-user"></i>
+      <span itemprop="name">Website Administrator</span> 
+
+       <i class="fa fa-folder"></i>
+                  <span itemprop="genre">Edisi No 10 Vol XLII - 2016</span>
+       
+ <i class="icon-calendar"></i>
+        <time datetime="2016-11-03T05:55:33+00:00" itemprop="datePublished">
+          03 November 2016        </time>
+       </p>
+      </div>
+    </div>
+
+</div>
+ <div class="panel-footer"><a href="" class="btn btn-warning">+ Selengkapnya</a></div>
+
+</div>
+
+</div>
+
+</div>
+<div class="row">
+
+
+<div class="col-md-6">
+
+<div class="panel panel-default">
+  <div class="panel-body artikel-body">
+
+<h4>Saripati <i class="fa fa-angle-right pull-right"></i></h4>
+<hr />
+
+<div class="media">
+           
+      <div class="media-body">
+        <h4 class="media-heading"> <a  href="#">
+      Problematika Kesehatan Wanita Usia Lanjut</a>
+      </h4>
+        <p>
+
+          <i class="fa fa-user"></i>
+      <span itemprop="name">Website Administrator</span> 
+
+       <i class="fa fa-folder"></i>
+                  <span itemprop="genre">Edisi No 10 Vol XLII - 2016</span>
+       
+ <i class="icon-calendar"></i>
+        <time datetime="2016-11-03T05:55:33+00:00" itemprop="datePublished">
+          03 November 2016        </time>
+       </p>
+      </div>
+    </div>
+
+</div>
+ <div class="panel-footer"><a href="" class="btn btn-warning">+ Selengkapnya</a></div>
+
+</div>
+
+</div>
+
+<div class="col-md-6">
+<div class="panel panel-default">
+  <div class="panel-body artikel-body">
+<h4>Artikel Penelitian  <i class="fa fa-angle-right pull-right"></i></h4>
+<hr />
+<div class="media">
+           
+      <div class="media-body">
+        <h4 class="media-heading"> <a  href="#">
+      Problematika Kesehatan Wanita Usia Lanjut</a>
+      </h4>
+        <p>
+
+          <i class="fa fa-user"></i>
+      <span itemprop="name">Website Administrator</span> 
+
+       <i class="fa fa-folder"></i>
+                  <span itemprop="genre">Edisi No 10 Vol XLII - 2016</span>
+       
+ <i class="icon-calendar"></i>
+        <time datetime="2016-11-03T05:55:33+00:00" itemprop="datePublished">
+          03 November 2016        </time>
+       </p>
+      </div>
+    </div>
+
+</div>
+ <div class="panel-footer"><a href="" class="btn btn-warning">+ Selengkapnya</a></div>
+
+</div>
+
+</div>
+
+</div>
+<div class="row">
+
+<div class="col-md-6">
+<div class="panel panel-default">
+  <div class="panel-body artikel-body">
+<h4>Artikel Konsep  <i class="fa fa-angle-right pull-right"></i></h4>
+<hr />
+
+<div class="media">
+           
+      <div class="media-body">
+        <h4 class="media-heading"> <a  href="#">
+      Problematika Kesehatan Wanita Usia Lanjut</a>
+      </h4>
+        <p>
+
+          <i class="fa fa-user"></i>
+      <span itemprop="name">Website Administrator</span> 
+
+       <i class="fa fa-folder"></i>
+                  <span itemprop="genre">Edisi No 10 Vol XLII - 2016</span>
+       
+ <i class="icon-calendar"></i>
+        <time datetime="2016-11-03T05:55:33+00:00" itemprop="datePublished">
+          03 November 2016        </time>
+       </p>
+      </div>
+    </div>
+
+</div>
+ <div class="panel-footer"><a href="" class="btn btn-warning">+ Selengkapnya</a></div>
+
+</div>
+
+</div>
+
+
+<div class="col-md-6">
+<div class="panel panel-default">
+  <div class="panel-body artikel-body">
+<h4>Fokus   <i class="fa fa-angle-right pull-right"></i></h4>
+<hr />
+
+<div class="media">
+           
+      <div class="media-body">
+        <h4 class="media-heading"> <a  href="#">
+      Problematika Kesehatan Wanita Usia Lanjut</a>
+      </h4>
+        <p>
+
+          <i class="fa fa-user"></i>
+      <span itemprop="name">Website Administrator</span> 
+
+       <i class="fa fa-folder"></i>
+                  <span itemprop="genre">Edisi No 10 Vol XLII - 2016</span>
+       
+ <i class="icon-calendar"></i>
+        <time datetime="2016-11-03T05:55:33+00:00" itemprop="datePublished">
+          03 November 2016        </time>
+       </p>
+      </div>
+    </div>
+
+</div>
+ <div class="panel-footer"><a href="" class="btn btn-warning">+ Selengkapnya</a></div>
+
+</div>
+
+</div>
+
+</div>
+<div class="row">
+
+
+<div class="col-md-6">
+<div class="panel panel-default">
+  <div class="panel-body artikel-body">
+<h4>Studi Kasus    <i class="fa fa-angle-right pull-right"></i></h4>
+<hr />
+
+<div class="media">
+           
+      <div class="media-body">
+        <h4 class="media-heading"> <a  href="#">
+      Problematika Kesehatan Wanita Usia Lanjut</a>
+      </h4>
+        <p>
+
+          <i class="fa fa-user"></i>
+      <span itemprop="name">Website Administrator</span> 
+
+       <i class="fa fa-folder"></i>
+                  <span itemprop="genre">Edisi No 10 Vol XLII - 2016</span>
+       
+ <i class="icon-calendar"></i>
+        <time datetime="2016-11-03T05:55:33+00:00" itemprop="datePublished">
+          03 November 2016        </time>
+       </p>
+      </div>
+    </div>
+
+
+</div>
+ <div class="panel-footer"><a href="" class="btn btn-warning">+ Selengkapnya</a></div>
+
+</div>
+
+</div>
+
+
+<div class="col-md-6">
+<div class="panel panel-default">
+  <div class="panel-body artikel-body">
+<h4>Penyegaran Kompetensi     <i class="fa fa-angle-right pull-right"></i></h4>
+<hr />
+
+<div class="media">
+           
+      <div class="media-body">
+        <h4 class="media-heading"> <a  href="#">
+      Problematika Kesehatan Wanita Usia Lanjut</a>
+      </h4>
+        <p>
+
+          <i class="fa fa-user"></i>
+      <span itemprop="name">Website Administrator</span> 
+
+       <i class="fa fa-folder"></i>
+                  <span itemprop="genre">Edisi No 10 Vol XLII - 2016</span>
+       
+ <i class="icon-calendar"></i>
+        <time datetime="2016-11-03T05:55:33+00:00" itemprop="datePublished">
+          03 November 2016        </time>
+       </p>
+      </div>
+    </div>
+
+</div>
+ <div class="panel-footer"><a href="" class="btn btn-warning">+ Selengkapnya</a></div>
+   
+</div>
+
+</div>
+
+</div>
+
+
+<div class="panel panel-default">
+  <div class="panel-body artikel-body">
+<h4>Kolom     <i class="fa fa-angle-right pull-right"></i></h4>
+<hr />
+
+<div class="media">
+           
+      <div class="media-body">
+        <h4 class="media-heading"> <a  href="#">
+      Waspadai Virus Zika</a>
+      </h4>
+        <p>
+
+          <i class="fa fa-user"></i>
+      <span itemprop="name">Website Administrator</span> 
+
+       <i class="fa fa-folder"></i>
+                  <span itemprop="genre">Edisi No 10 Vol XLII - 2016</span>
+       
+ <i class="icon-calendar"></i>
+        <time datetime="2016-11-03T05:55:33+00:00" itemprop="datePublished">
+          03 November 2016        </time>
+       </p>
+      </div>
+    </div>
+
+    <div class="media">
+           
+      <div class="media-body">
+        <h4 class="media-heading"> <a  href="#">
+      Waspadai Virus Zika</a>
+      </h4>
+        <p>
+
+          <i class="fa fa-user"></i>
+      <span itemprop="name">Website Administrator</span> 
+
+       <i class="fa fa-folder"></i>
+                  <span itemprop="genre">Edisi No 10 Vol XLII - 2016</span>
+       
+ <i class="icon-calendar"></i>
+        <time datetime="2016-11-03T05:55:33+00:00" itemprop="datePublished">
+          03 November 2016        </time>
+       </p>
+      </div>
+    </div>
+
+    </div>
+     <div class="panel-footer"><a href="" class="btn btn-warning">+ Selengkapnya</a></div>
+   
+    </div>
+
+
+<!-- banner iklan -->
+<center>
+<img src="<?php echo Template::theme_url("img/Bnaer-bawah.gif");?>" class="img-responsive" style="width:100%">
+</center>
+
+
+
 </div>
 
 <div class="col-md-4">
-<br />
-<!-- Nav tabs -->
-<ul class="nav nav-tabs">
-  <li class="active"><a href="#home" data-toggle="tab">Terbaru</a></li>
-  <li><a href="#profile" data-toggle="tab">Terpopuler</a></li>
-  
-</ul>
 
-<!-- Tab panes -->
-<div class="tab-content">
-  <div class="tab-pane active" id="home">
-    
-    <div class="list-group">
-                  
-      <a href="" class="list-group-item">
-
-        <h4 class="list-group-item-heading">Menjaga Profesionalisme Praktik Kedokteran</h4>
-       
-        <p class="list-group-item-text">
-        <small><i class="fa fa-calendar"></i> 28 Mei 2017</small>
-  <br>
-        Hubungan ANTARA Homosistein DENGAN Kepadatan Mineral Tulang Berdasarkan Usia dan Jenis Kelamin PADA Orang Dewasa Sehat           </p> 
-        
-      </a>
-            
-      <a href="" class="list-group-item">
-
-        <h4 class="list-group-item-heading">Menjaga Profesionalisme Praktik Kedokteran </h4>
-       
-        <p class="list-group-item-text">
-        <small><i class="fa fa-calendar"></i> 28 Mei 2017</small>
-  <br>
-        Hubungan ANTARA Homosistein DENGAN Kepadatan Mineral Tulang Berdasarkan Usia dan Jenis Kelamin PADA Orang Dewasa Sehat           </p> 
-        
-      </a>
-             </div>
-
-  </div>
-  <div class="tab-pane" id="profile">...</div>
- 
-</div>
+ <?php echo theme_view('sidebar'); ?>
 
 </div>
 

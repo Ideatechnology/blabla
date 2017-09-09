@@ -4,21 +4,10 @@
 
     <ul class="nav navmenu-nav metismenu" id="menu1">
 
-    <li class=" "><a href="" target="_self">BERANDA</a></li>
-       <li class=" dropdown"><a href="" class="dropdown-toggle" data-toggle="dropdown" target="">SUPLEMEN<span class="caret"></span></a><ul class="dropdown-menu">
-       <li><a href="" target="_self">Selayang Pandang</a>
-          </li><li><a href="" target="">Tentang Kami</a>
-          </li><li><a href="" target="">Struktur Organisasi</a>
-          </li></ul></li>
-
-          <li class=" dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" target="_self">KOLOM<span class="caret"></span></a>
-
-          <ul class="dropdown-menu"><li><a href="" target="">ARTIKEL</a>
-         </ul></li>
-
-          <li class=" "><a href="" target="_self">ARTIKEL</a></li>
-          <li class=" "><a href="" target="_self">DARI REDAKSI</a></li><li class=" "><a href="" target="_self">BERITA</a></li><li class=" "><a href="" target="_self">FORUM</a></li>
+    <?php
+                //untuk menampilkan menu top
+                 generate_menu_multiple(0);
+            ?>
 
       </ul>
      

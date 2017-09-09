@@ -37,7 +37,8 @@
 	<meta content='follow, all' name='Slurp'/>
 	<meta name="generator" content="Jurnal Medika" />
 	<meta name="author" content="Jurnal Medika">
-
+<link href="<?php echo Template::theme_url("img/favicon.ico");?>" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	
 
 
     <!-- Bootstrap -->
