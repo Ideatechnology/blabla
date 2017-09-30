@@ -35,7 +35,9 @@
 /* form */ 
 body{
   overflow-x: hidden !important;
-   font-family: "Roboto", sans-serif !important;
+   font-family: Roboto, sans-serif !important;
+
+    font-size: 14px;
 }
 .sosmed_ul{
   margin-top: 5px;
@@ -46,6 +48,10 @@ body{
 .sosmed_ul .nav>li>a:focus, .nav>li>a:active,.nav>li>a:visited,.nav>li>a:hover {
     text-decoration: none;
     background-color: #fff !important;
+}
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6{
+    font-weight: 300;
+    line-height: 1.3;
 }
 .well {
     min-height: 20px;
@@ -151,7 +157,7 @@ body{
 }
 
 a {
-    color: #777;
+    color: #6f736f;
     text-decoration: none;
 }
 
@@ -1493,6 +1499,11 @@ border-top:0px solid #ddd;margin-top:10px;height:120px;
 .social-top{
     margin-top: 10px;
 }
+.btn-warning {
+    color: #fff;
+    background-color: #ea7f32 !important;
+    border-color: #eea236;
+}
 
 .produk-moswanted-category .thumbnail{
     box-shadow: 0 3px 6px rgba(0,0,0,.16), 0 3px 6px rgba(0,0,0,.23);
@@ -1504,7 +1515,7 @@ border-top:0px solid #ddd;margin-top:10px;height:120px;
 
 .panel-warning>.panel-heading {
     color: #ffffff !important;
-    background-color: #f0ad4e !important;;
+    background-color: #ea7f31 !important;
     border-color: #f0ad4e !important;;
 }
 

@@ -79,7 +79,16 @@ class Widget_consistence
 		$bulan = date("m");
 		$tahun = date("Y");
 
-		
+		$redaksi = $this->CI->post_model->post_categories(107,0,4)->result();
+		Template::set("redaksi",$redaksi);
+
+		$kolom = $this->CI->post_model->post_categories(97,0,4)->result();
+		Template::set("kolom",$kolom);
+
+
+		$editorial = $this->CI->post_model->post_categories(104,0,4)->result();
+		Template::set("editorial",$editorial);
+
 		
 		$statistikperhari=$this->CI->db->query("select count(*) as jumlah from bf_activities where DATE_FORMAT(created_on,'%d')='".$hari."'")->row();
 		Template::set("statistikperhari",$statistikperhari->jumlah);

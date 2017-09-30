@@ -94,12 +94,7 @@ class Home extends CI_Controller
 		$slide = $this->slide_model->getSlider(6);
 		Template::set("slide",$slide);
 
-		$redaksi = $this->post_model->post_categories(107,0,4)->result();
-		Template::set("redaksi",$redaksi);
-
-		$editorial = $this->post_model->post_categories(104,0,4)->result();
-		Template::set("editorial",$editorial);
-
+		
 		$saripati = $this->post_model->post_categories(103,0,4)->result();
 		Template::set("saripati",$saripati);
 
@@ -118,11 +113,13 @@ class Home extends CI_Controller
 		$penyegarankompetensi = $this->post_model->post_categories(105,0,4)->result();
 		Template::set("penyegarankompetensi",$penyegarankompetensi);
 
-		$kolom = $this->post_model->post_categories(97,0,4)->result();
-		Template::set("kolom",$kolom);
-
+		
 		$berita_terbaru = $this->post_model->post_all(0,1,"created_on")->row();
 		Template::set("berita_terbaru",$berita_terbaru);
+
+		$morenews = $this->post_model->post_all(1,2,"created_on")->result();
+		Template::set("morenews",$morenews);
+
 
 		Template::set_view('home');
 		Template::render();

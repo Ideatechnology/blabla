@@ -3,6 +3,23 @@
 
     <?php echo theme_view('header'); ?>
 
+<style>
+.panel-footer {
+    padding: 10px 15px;
+    background-color: #ffffff;
+    border-top: 1px solid #ddd;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+.panel-default>.panel-heading {
+    color: #fff;
+    background-color: #333c97;
+    border-color: #ddd;
+}
+p{
+  font-weight: 300;
+}
+</style>
 <section class="content">
 <!-- untuk banner slide home -->
 <?php if($slide):?>
@@ -46,23 +63,20 @@
 
 <div class="container">
 <div class="row">
-<div class="col-md-8">
+<div class="col-md-8" style="    background: #323b97;
+    padding-bottom: 30px;">
 
 <div class="row">
 <div class="col-md-7">
 <br />
-<div class="panel panel-default">
+<div class="panel panel-default" style="    border-color: transparent;
+    background: transparent;">
   <div class="panel-body">
 
-<h3><a href="">Pengaruh repens Agropyron di Stone Ginjal dan Ureter Batu Persepsi Pasien of Pain</a></h3>
-<p><i class="fa fa-user"></i> Admin <i class="fa fa-calendar"></i> 28 Mei 2017  <span class="label label-success">Artikel Penelitian</span></p>
-<p style="text-align: justify;">NUGROHO PURNOMO
-
-DAN ZULFIKAR ALI
-
-Divisi Urologi, Departemen Bedah, Fakultas Kedokteran Universitas Indonesia, Rumah Sakit Cipto Mangunkusumo Rujukan
-nyeri pinggang pada pasien batu ginjal dan ureter batu membutuhkan obat cepat dan tepat. Berbagai obat-obatan telah diteliti sebagai edukasi sakit di batu ginjal dan pasien ureter batu. Sebagian besar pasien nyeri pinggang yang diresepkan obat NSAID. Efek samping dari NSAID dalam hal gastroin estinal, ginjal. </p>
-<a href="" class="btn btn-warning">Read More</a>
+<h3><a style="color: #ffe10f;" href="<?php echo site_url("blog/".$berita_terbaru->id."-".url_title($berita_terbaru->judul));?>"><?php echo $berita_terbaru->judul;?></a></h3>
+<p style="color: #eae7e7;"><small><i class="fa fa-user"></i> <?php echo $berita_terbaru->author;?> <i class="fa fa-calendar"></i> <?php echo date("d M Y H:i",strtotime($berita_terbaru->created_on));?>  <span class="label label-success"><?php echo $berita_terbaru->kategori_bahasa;?></span></small></p>
+<p style="text-align: justify;color: #fff;"><?php echo $berita_terbaru->slug_judul;?></p>
+<a href="<?php echo site_url("blog/".$berita_terbaru->id."-".url_title($berita_terbaru->judul));?>" class="btn btn-warning">Read More</a>
 </div>
 </div>
 </div>
@@ -71,25 +85,23 @@ nyeri pinggang pada pasien batu ginjal dan ureter batu membutuhkan obat cepat da
 <div class="panel panel-warning">
   <div class="panel-heading">More News</div>
   <div class="panel-body">
-    <a href="">
-      Hubungan ANTARA Homosistein DENGAN Kepadatan Mineral Tulang Berdasarkan Usia dan Jenis Kelamin PADA Orang Dewasa Sehat
+    <?php if($morenews): ?>
+      <?php foreach($morenews as $morenews_row): ?>
+    <h4><a href="<?php echo site_url("blog/".$morenews_row->id."-".url_title($morenews_row->judul));?>">
+      <?php echo $morenews_row->judul; ?>
 
 
-    </a><br />
-    <i class="fa fa-user"></i> Admin <i class="fa fa-calendar"></i> 28 Mei 2017  <span class="label label-success">Artikel Penelitian</span>
+    </a></h4>
+    <small><i class="fa fa-user"></i> <?php echo $morenews_row->author; ?> <i class="fa fa-calendar"></i> <?php echo date("d M Y H:i",strtotime($morenews_row->created_on));?>   <span class="label label-success"><?php echo $morenews_row->kategori_bahasa; ?></span></small>
+    
     <hr />
-    <a href="">
-      Hubungan ANTARA Homosistein DENGAN Kepadatan Mineral Tulang Berdasarkan Usia dan Jenis Kelamin PADA Orang Dewasa Sehat
-
-
-    </a><br />
-    <i class="fa fa-user"></i> Admin <i class="fa fa-calendar"></i> 28 Mei 2017  <span class="label label-success">Artikel Penelitian</span>
-
-
+  <?php endforeach; ?>
+  <?php endif; ?>
+    
 
 
   </div>
-  <div class="panel-footer"><a href="" class="btn btn-warning">Index News</a></div>
+ 
 </div>
 
 
@@ -106,78 +118,11 @@ nyeri pinggang pada pasien batu ginjal dan ureter batu membutuhkan obat cepat da
 
 <div class="col-md-6">
 
-<div class="panel panel-default">
-  <div class="panel-body artikel-body">
-<h4>Dari Redaksi <i class="fa fa-angle-right pull-right"></i></h4>
-<hr />
 
-<?php if($redaksi): ?>
-  <?php foreach($redaksi as $redaksi_row): ?>
-<div class="media">
-           
-      <div class="media-body">
-        <h4 class="media-heading"> <a  href="<?php echo site_url("blog/".$redaksi_row->id."-".url_title($redaksi_row->judul));?>">
-      <?php echo $redaksi_row->judul;?></a>
-      </h4>
-        <p>
-
-          <i class="fa fa-user"></i>
-      <span itemprop="name"><?php echo $redaksi_row->author;?></span> 
-
-       
- <i class="fa fa-calendar"></i>
-        <time datetime="2016-11-03T05:55:33+00:00" itemprop="datePublished">
-          <?php echo date("d M Y H:i",strtotime($redaksi_row->created_on));?>      </time>
-       </p>
-      </div>
-    </div>
-      <?php endforeach; ?>
-<?php endif; ?>
-
-
-    </div>
-    <div class="panel-footer"><a href="<?php echo site_url("post/107-dari-redaksi");?>" class="btn btn-warning">+ Selengkapnya</a></div>
-    </div>
 
 </div>
 
 
-<div class="col-md-6">
-
-<div class="panel panel-default">
-  <div class="panel-body artikel-body">
-<h4>Editorial <i class="fa fa-angle-right pull-right"></i></h4>
-<hr />
-
-<?php if($editorial): ?>
-  <?php foreach($editorial as $redaksi_row): ?>
-<div class="media">
-           
-      <div class="media-body">
-        <h4 class="media-heading"> <a  href="<?php echo site_url("blog/".$redaksi_row->id."-".url_title($redaksi_row->judul));?>">
-      <?php echo $redaksi_row->judul;?></a>
-      </h4>
-        <p>
-
-          <i class="fa fa-user"></i>
-      <span itemprop="name"><?php echo $redaksi_row->author;?></span> 
-
-       
- <i class="fa fa-calendar"></i>
-        <time datetime="2016-11-03T05:55:33+00:00" itemprop="datePublished">
-          <?php echo date("d M Y H:i",strtotime($redaksi_row->created_on));?>      </time>
-       </p>
-      </div>
-    </div>
-        <?php endforeach; ?>
-<?php endif; ?>
-
-</div>
- <div class="panel-footer"><a href="<?php echo site_url("post/104-editorial");?>" class="btn btn-warning">+ Selengkapnya</a></div>
-
-</div>
-
-</div>
 
 </div>
 <div class="row">
@@ -186,6 +131,7 @@ nyeri pinggang pada pasien batu ginjal dan ureter batu membutuhkan obat cepat da
 <div class="col-md-6">
 
 <div class="panel panel-default">
+
   <div class="panel-body artikel-body">
 
 <h4>Saripati <i class="fa fa-angle-right pull-right"></i></h4>
@@ -416,39 +362,7 @@ nyeri pinggang pada pasien batu ginjal dan ureter batu membutuhkan obat cepat da
 </div>
 
 
-<div class="panel panel-default">
-  <div class="panel-body artikel-body">
-<h4>Kolom     <i class="fa fa-angle-right pull-right"></i></h4>
-<hr />
-<?php if($kolom): ?>
-  <?php foreach($kolom as $redaksi_row): ?>
-<div class="media">
-           
-      <div class="media-body">
-        <h4 class="media-heading"> <a  href="<?php echo site_url("blog/".$redaksi_row->id."-".url_title($redaksi_row->judul));?>">
-      <?php echo $redaksi_row->judul;?></a>
-      </h4>
-        <p>
 
-         
-           <i class="fa fa-user"></i>
-      <span itemprop="name"><?php echo $redaksi_row->author;?></span> 
-
-       
- <i class="fa fa-calendar"></i>
-        <time datetime="2016-11-03T05:55:33+00:00" itemprop="datePublished">
-          <?php echo date("d M Y H:i",strtotime($redaksi_row->created_on));?>      </time>
-       </p>
-      </div>
-    </div>
-
-      <?php endforeach; ?>
-<?php endif; ?>
-
-    </div>
-     <div class="panel-footer"><a href="<?php echo site_url("post/97-kolom");?>" class="btn btn-warning">+ Selengkapnya</a></div>
-   
-    </div>
 
 
 <!-- banner iklan -->

@@ -54,7 +54,7 @@
                 <div class="col-md-6 col-xs-6">
                     <ul class="nav nav-pills nav-stacked ">
                       
-                        <li class=" "><a href="#" target=""><i class="fa fa-angle-right"></i> SUPLEMEN</a></li><li class=" "><a href="#" target="_self"><i class="fa fa-angle-right"></i> KOLOM</a></li><li class=" "><a href="#" target="_self"><i class="fa fa-angle-right"></i> ARTIKEL</a></li>                      
+                        <li class=" "><a href="#" target=""><i class="fa fa-angle-right"></i> SUPLEMEN</a></li><li class=" "><a href="#" target="_self"><i class="fa fa-angle-right"></i> KOLOM</a></li><li class=" ">                      
                      
                     </ul>
                     </div>
@@ -62,7 +62,8 @@
                        <div class="col-md-6 col-xs-6">
               
                     <ul class="nav nav-pills nav-stacked ">
-                     <li class=" "><a href="#" target="_self"><i class="fa fa-angle-right"></i> DARI REDAKSI</a></li><li class=" "><a href="#" target="_self"><i class="fa fa-angle-right"></i> FORUM</a></li>                      
+                     <li class=" "><a href="#" target="_self"><i class="fa fa-angle-right"></i> DARI REDAKSI</a></li>
+                    <li> <a href="#" target="_self"><i class="fa fa-angle-right"></i> ARTIKEL</a></li>                      
                     
                     </ul>
                 </div>
