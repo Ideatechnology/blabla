@@ -23,10 +23,10 @@ function cek_image($url,$image){
   if (file_exists($url.$image)) {
   	return base_url()."application/modules/post/images/".$image;
   }else{
-  	return base_url()."assets/images/no_image.gif";
+  	return base_url()."assets/img/no_image.png";
   }
 }else{
-  return base_url()."assets/images/no_image.gif";
+  return base_url()."assets/img/no_image.png";
 }
 }
 

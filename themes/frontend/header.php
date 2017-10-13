@@ -19,11 +19,10 @@
     
 <div class="row">
 <div class="col-md-3 col-sm-4  hidden-xs">
-<form class="hidden-sm" method="get" action="" role="search" style="padding: 0px 0px;
+<form class="hidden-sm" method="get" action="<?php echo site_url("search/index");?>" role="search" style="padding: 0px 0px;
     margin: 20px 0px 10px 0px;">
-          <input type="hidden" name="kabkot" value="">
-       
-      <input type="text" class="form-control form-cari" value="" name="keyword" placeholder=" Search" style="">
+         
+      <input type="text" class="form-control form-cari" value="<?php echo $this->input->get("keyword");?>" name="keyword" placeholder=" Search" style="">
      
  
 

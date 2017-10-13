@@ -27,7 +27,7 @@
 	<select name="tipe" required="required" class="form-control">
 		<option value="">--Pilih Tipe--</option>
 		<?php 
-			$tipe_data = array(1=>"Banner Link",2=>"Situs Komponen",3=>"Tautan Lainnya");
+			$tipe_data = array(1=>"Banner Link",2=>"Iklan");
 			foreach($tipe_data as $tipe_data_value): ?>
 		
 			<option value="<?php echo $tipe_data_value;?>" <?php echo @$value->tipe==$tipe_data_value?"selected":"";?>><?php echo $tipe_data_value;?></option>

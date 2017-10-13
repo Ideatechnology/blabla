@@ -1,5 +1,5 @@
 
-<div class="panel panel-default">
+<div class="panel panel-default" style="margin-top:20px;">
    <div class="panel-heading"><h4>Dari Redaksi     <i class="fa fa-angle-right pull-right"></i></h4></div>
   
   <div class="panel-body">

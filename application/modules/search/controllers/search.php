@@ -27,7 +27,9 @@ class Search extends Front_Controller{
 		$this->load->helper("text");
 		$this->load->helper("post/post");
  		$this->load->model("api_model");
+
 		$query = $this->api_model->searching($keywords);
+		
 		$jumlah = count($query);
 		Template::set("jumlah",$jumlah);
 		Template::set("query",$query);
