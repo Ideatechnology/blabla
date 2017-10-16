@@ -56,7 +56,7 @@ class Contexts
 	 *
 	 * @var string
 	 */
-	protected static $outer_class	= 'nav ';
+	protected static $outer_class	= 'nav side-menu';
 
 	/**
 	 * The id to apply to the outer ul tag.

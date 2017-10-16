@@ -8,6 +8,8 @@ $fieldData = array(
     'controlClass'  => $controlClass,
 );
 
+
+
 ?>
 <style>
 p.already-registered {
@@ -34,8 +36,15 @@ $inline='
     ?>
 
 <section id="register">
+    <?php echo Template::message(); ?>  
     <h1 class="page-header" style="margin-left:100px;"><?php echo lang('us_sign_up'); ?></h1>
  
+ <?php
+        if (validation_errors()) :
+    ?>
+    
+                <?php echo validation_errors(); ?>
+    <?php endif; ?>
 
     <div class="row">
             	<div class="col-xs-12">
@@ -48,6 +57,10 @@ $inline='
                 <!-- Start of User Meta -->
         
 				<?php $this->load->view('users/user_meta', array('frontend_only' => true)); ?>
+
+
+               
+
                 <!-- End of User Meta -->
 				<div class="form-group ">
 	<label class="col-xs-4 control-label" for="kode_pos"></label>
@@ -59,6 +72,8 @@ $inline='
 		
 	</div>
 </div>
+
+
 				
 
                 <hr />

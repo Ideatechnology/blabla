@@ -1,1 +1,1 @@
-$('#tanggal_lahir').datepicker({ dateFormat: 'yy-mm-dd',changeYear:true,changeMonth:true,yearRange: "-65:+0",});
+$('.tanggal_lahir').datepicker({ format: 'yyyy-mm-dd',changeYear:true,changeMonth:true,yearRange: "-2:+0",});

@@ -50,7 +50,7 @@ echo form_open($this->uri->uri_string(), 'class="form-horizontal" autocomplete="
     <fieldset>
         <legend><?php echo lang('us_role'); ?></legend>
         <div class="form-group">
-            <label for="role_id" class="col-xs-2 control-label"><?php echo lang('us_role'); ?></label>
+            <label for="role_id" class="col-xs-4 control-label"><?php echo lang('us_role'); ?></label>
             <div class="col-xs-5">
                 <select name="role_id" id="role_id" class="chzn-select <?php echo $controlClass; ?>">
                     <?php
@@ -143,7 +143,7 @@ echo form_open($this->uri->uri_string(), 'class="form-horizontal" autocomplete="
     <?php endif; ?>
 	
 	<div class="form-group">
-    <div class="col-sm-offset-2 col-sm-10">
+    <div class="col-sm-offset-4 col-sm-10">
     <input type="submit" name="save" class="btn btn-primary" value="<?php echo lang('bf_action_save') . ' ' . lang('bf_user'); ?>" />
         <?php echo lang('bf_or'); ?>
         <?php echo anchor(SITE_AREA . '/settings/users', lang('bf_action_cancel')); ?>

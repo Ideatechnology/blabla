@@ -28,11 +28,24 @@ $inline='
     ?>
 <section id="profile">
 
-<div class="row-fluid">
+<div class="row">
     	<div class="col-xs-12">
 		
 	<h1 class="page-header" style="margin-left:100px;"><?php echo lang('us_edit_profile'); ?></h1>
-    <?php if ($validation_errors) : ?>
+
+
+
+   
+	
+
+</div></div>
+	<div class="row">
+    	<div class="col-xs-12">
+
+            <?php echo form_open($this->uri->uri_string(), array('class' => 'form-horizontal', 'autocomplete' => 'off',"data-ajax"=>"false")); ?>
+
+
+            <?php if ($validation_errors) : ?>
     <div class="alert alert-danger">
         <?php echo $validation_errors; ?>
     </div>
@@ -42,12 +55,9 @@ $inline='
         <?php echo lang('us_banned_admin_note'); ?>
     </div>
     <?php endif; ?>
-	
+             <?php echo Template::message(); ?> 
 
-</div></div>
-	<div class="row-fluid">
-    	<div class="col-xs-12">
-            <?php echo form_open($this->uri->uri_string(), array('class' => 'form-horizontal', 'autocomplete' => 'off',"data-ajax"=>"false")); ?>
+            
                 <?php Template::block('user_fields', 'user_fields', $fieldData); ?>
                 <?php
                 // Allow modules to render custom fields
@@ -87,7 +97,7 @@ $inline='
 				<hr />
                 
 				<div class="form-group">
-    <div class="col-xs-offset-2 col-xs-10">
+    <div class="col-xs-offset-4 col-xs-10">
                     <input type="submit" name="save" class="btn btn-primary" value="<?php echo lang('bf_action_save') . ' ' . lang('bf_user'); ?>" />
                     <?php echo lang('bf_or') . ' ' . anchor('/', lang('bf_action_cancel')); ?>
                 </div></div>

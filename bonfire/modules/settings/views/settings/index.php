@@ -20,6 +20,12 @@ endif;
 				<li class="active">
 					<a href="#main-settings" data-toggle="tab"><?php echo lang('set_tab_settings') ?></a>
 				</li>
+
+				<li class="">
+					<a href="#security" data-toggle="tab">Keamanan</a>
+				</li>
+
+				
 				
 			</ul>
 			<br /><br />

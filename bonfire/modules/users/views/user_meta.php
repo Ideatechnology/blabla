@@ -49,4 +49,26 @@
 			endif;
 			?>
 			<?php endif;?>
+
 		<?php endforeach; ?>
+
+
+		 <div class="form-group">
+                 <label class="col-xs-4 control-label" for="tanggal_berlangganan">Tanggal Berlangganan *</label>
+                 <div class="col-md-7">
+                    <table>
+                        <tr>
+                            <td>
+                    <input type="text" class="form-control tanggal_lahir" value="<?php echo set_value("tanggal_mulai",isset($user) ? $user->tanggal_mulai_langganan :date("Y-m-d"));?>"  name="tanggal_mulai">
+                </td>
+                <td>
+                    <center style="margin:0px 10px;">Sampai</center>
+                </td>
+                <td>
+                    <input type="text"  value="<?php echo set_value("tanggal_sampai", isset($user) ? $user->tanggal_sampai_langganan :date("Y-m-d"));?>" class="form-control tanggal_lahir"  name="tanggal_sampai">
+                </td>
+            </tr>
+                    </table>
+                    </div>
+                </div> 
+               

@@ -101,7 +101,7 @@
    
     </div>
 
-<h2>Artikel</h2>
+<h2>Artikel Penelitian</h2>
 
 <!-- Nav tabs -->
 <ul class="nav nav-tabs">
@@ -113,34 +113,57 @@
 <!-- Tab panes -->
 <div class="tab-content">
   <div class="tab-pane active" id="artikelterbaru">
-    
+      <?php if($artikel_terbaru): ?>
     <div class="list-group">
-                  
-      <a href="" class="list-group-item">
+              
+      <?php foreach($artikel_terbaru as $artikel_terbaru_row): ?>
 
-        <h4 class="list-group-item-heading">Menjaga Profesionalisme Praktik Kedokteran</h4>
+      <a href="<?php echo site_url("blog/".$artikel_terbaru_row->id."-".url_title($artikel_terbaru_row->judul));?>" class="list-group-item">
+
+        <h4 class="list-group-item-heading"><?php echo $artikel_terbaru_row->judul;?></h4>
        
         <p class="list-group-item-text">
-        <small><i class="fa fa-calendar"></i> 28 Mei 2017</small>
+        <small><i class="fa fa-calendar"></i> <?php echo date("d M Y H:i",strtotime($artikel_terbaru_row->created_on));?></small>
   <br>
-        Hubungan ANTARA Homosistein DENGAN Kepadatan Mineral Tulang Berdasarkan Usia dan Jenis Kelamin PADA Orang Dewasa Sehat           </p> 
+        <?php echo word_limiter(strip_tags($artikel_terbaru_row->isi),30); ?>           </p> 
         
       </a>
+
+        <?php endforeach; ?>
             
-      <a href="" class="list-group-item">
-
-        <h4 class="list-group-item-heading">Menjaga Profesionalisme Praktik Kedokteran </h4>
-       
-        <p class="list-group-item-text">
-        <small><i class="fa fa-calendar"></i> 28 Mei 2017</small>
-  <br>
-        Hubungan ANTARA Homosistein DENGAN Kepadatan Mineral Tulang Berdasarkan Usia dan Jenis Kelamin PADA Orang Dewasa Sehat           </p> 
-        
-      </a>
+    
+             
              </div>
+           <?php endif; ?>
 
   </div>
-  <div class="tab-pane" id="artikelterpopuler">...</div>
+  <div class="tab-pane" id="artikelterpopuler">
+    
+
+     <?php if($artikel_terpopuler): ?>
+    <div class="list-group">
+              
+      <?php foreach($artikel_terpopuler as $artikel_terpopuler_row): ?>
+
+      <a href="<?php echo site_url("blog/".$artikel_terpopuler_row->id."-".url_title($artikel_terpopuler_row->judul));?>" class="list-group-item">
+
+        <h4 class="list-group-item-heading"><?php echo $artikel_terpopuler_row->judul;?></h4>
+       
+        <p class="list-group-item-text">
+        <small><i class="fa fa-calendar"></i> <?php echo date("d M Y H:i",strtotime($artikel_terpopuler_row->created_on));?></small>
+  <br>
+         <?php echo word_limiter(strip_tags($artikel_terpopuler_row->isi),30); ?>           </p> 
+        
+      </a>
+
+        <?php endforeach; ?>
+            
+    
+             
+             </div>
+           <?php endif; ?>
+
+  </div>
  
 </div>
 
@@ -159,33 +182,57 @@
 <!-- Tab panes -->
 <div class="tab-content">
   <div class="tab-pane active" id="kegiatanterbaru">
-    
+      
+      <?php if($kegiatan_terbaru): ?>
     <div class="list-group">
                   
-      <a href="" class="list-group-item">
+      <?php foreach($kegiatan_terbaru as $kegiatan_terbaru_row): ?>
 
-        <h4 class="list-group-item-heading">Menjaga Profesionalisme Praktik Kedokteran</h4>
+      <a href="<?php echo site_url("blog/".$kegiatan_terbaru_row->id."-".url_title($kegiatan_terbaru_row->judul));?>" class="list-group-item">
+
+        <h4 class="list-group-item-heading"><?php echo $kegiatan_terbaru_row->judul;?></h4>
        
         <p class="list-group-item-text">
-        <small><i class="fa fa-calendar"></i> 28 Mei 2017</small>
+        <small><i class="fa fa-calendar"></i> <?php echo date("d M Y H:i",strtotime($kegiatan_terbaru_row->created_on));?></small>
   <br>
-        Hubungan ANTARA Homosistein DENGAN Kepadatan Mineral Tulang Berdasarkan Usia dan Jenis Kelamin PADA Orang Dewasa Sehat           </p> 
+         <?php echo word_limiter(strip_tags($kegiatan_terbaru_row->isi),30); ?>          </p> 
         
       </a>
+    <?php endforeach; ?>
+
             
-      <a href="" class="list-group-item">
-
-        <h4 class="list-group-item-heading">Menjaga Profesionalisme Praktik Kedokteran </h4>
-       
-        <p class="list-group-item-text">
-        <small><i class="fa fa-calendar"></i> 28 Mei 2017</small>
-  <br>
-        Hubungan ANTARA Homosistein DENGAN Kepadatan Mineral Tulang Berdasarkan Usia dan Jenis Kelamin PADA Orang Dewasa Sehat           </p> 
-        
-      </a>
+     
              </div>
 
+           <?php endif; ?>
+
   </div>
-  <div class="tab-pane" id="kegiatanterpopuler">...</div>
+  <div class="tab-pane" id="kegiatanterpopuler">
+    
+      <?php if($kegiatan_terpopuler): ?>
+    <div class="list-group">
+                  
+      <?php foreach($kegiatan_terpopuler as $kegiatan_terpopuler_row): ?>
+
+      <a href="<?php echo site_url("blog/".$kegiatan_terpopuler_row->id."-".url_title($kegiatan_terpopuler_row->judul));?>" class="list-group-item">
+
+        <h4 class="list-group-item-heading"><?php echo $kegiatan_terpopuler_row->judul;?></h4>
+       
+        <p class="list-group-item-text">
+        <small><i class="fa fa-calendar"></i> <?php echo date("d M Y H:i",strtotime($kegiatan_terpopuler_row->created_on));?></small>
+  <br>
+        <?php echo word_limiter(strip_tags($kegiatan_terpopuler_row->isi),30); ?>          </p> 
+        
+      </a>
+    <?php endforeach; ?>
+
+            
+     
+             </div>
+
+           <?php endif; ?>
+
+
+  </div>
  
 </div>

@@ -242,7 +242,7 @@ class Post_model extends BF_Model {
 		return $records;
 	}
 	
-	public function post_categories($id_kategori,$offset,$limit){
+	public function post_categories($id_kategori,$offset,$limit,$order="created_on"){
 
 
 		$field=$this->field_multi_bahasa($this->bahasa());	
@@ -255,7 +255,8 @@ class Post_model extends BF_Model {
 		$this->db->where($this->table_name.".deleted",0);	
 		$this->db->where($this->table_name.".status_tampil",0);			
 		$this->db->join($this->table_name_kategori,$this->table_name_kategori.'.id='.$this->table_name.'.post_category');
-		$this->db->order_by($this->table_name.".created_on","desc");
+		$this->db->order_by($this->table_name.".".$order,"desc");
+		
 		
 		$records = $this->db->get($this->table_name,$limit,$offset);
 

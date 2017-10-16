@@ -67,7 +67,10 @@ class Users extends Front_Controller
 			Assets::add_js('jquery-ui-timepicker-addon.js');
 		Assets::add_css('jquery-ui-timepicker.css');
 		
-		Assets::add_module_js('users', 'js/users.js');
+		Assets::add_js(Template::theme_url("plugins/datepicker/bootstrap-datepicker.js"));
+		Assets::add_css(Template::theme_url("plugins/datepicker/datepicker3.css"));
+
+		Assets::add_module_js('users', 'js/users.js');	
 		
 
 	}//end __construct()
@@ -349,7 +352,7 @@ class Users extends Front_Controller
 			Template::set('page_title', 'Profile User');
 		Template::set_view('users/users/profile');
 		Template::set_block('sidebar', 'produk/sidebarcustomer');
-		Template::render();	
+		Template::render("login");	
 
 	}//end profile()
 
@@ -515,8 +518,8 @@ class Users extends Front_Controller
 				$username_required = 'required|';
 			}
 			$this->form_validation->set_rules('username', 'lang:bf_username', $username_required . 'trim|max_length[30]|unique[users.username]');
-			$this->form_validation->set_rules('kota', 'lang:bf_kota','required');
-			$this->form_validation->set_rules('provinsi', 'lang:bf_provinsi','required');
+			//$this->form_validation->set_rules('kota', 'lang:bf_kota','required');
+			//$this->form_validation->set_rules('provinsi', 'lang:bf_provinsi','required');
 
 			$this->form_validation->set_rules('password', 'lang:bf_password', 'required|max_length[120]|valid_password');
 			$this->form_validation->set_rules('pass_confirm', 'lang:bf_password_confirm', 'required|matches[password]');
@@ -548,9 +551,8 @@ class Users extends Front_Controller
 						'password'		=> $this->input->post('password'),
 						'language'		=> $this->input->post('language'),
 						'timezone'		=> $this->input->post('timezones'),
-						'kota'		=> $this->input->post('kota'),
-						'provinsi'		=> $this->input->post('provinsi'),
-						'display_name'	=> $this->input->post('display_name'),
+						'tanggal_mulai_langganan'	=> $this->input->post('tanggal_mulai'),
+						'tanggal_sampai_langganan'	=> $this->input->post('tanggal_sampai'),
 					);
 
 				//cek validasi chaptcha
@@ -1011,9 +1013,9 @@ class Users extends Front_Controller
 		// Compile our core user elements to save.
 		$data = array(
 			'email'		=> $this->input->post('email'),
-			'kota'		=> $this->input->post('kota'),
-			'provinsi'		=> $this->input->post('provinsi'),
-			'kode_pos'		=> $this->input->post('kode_pos'),
+			'tanggal_mulai_langganan'		=> $this->input->post('tanggal_mulai'),
+			'tanggal_sampai_langganan'		=> $this->input->post('tanggal_sampai'),
+			//'kode_pos'		=> $this->input->post('kode_pos'),
 			'language'	=> $this->input->post('language'),
 			'timezone'	=> $this->input->post('timezones'),
 		);

@@ -3,18 +3,20 @@
 
 
   <nav class="navbar-default  navbar-static-side" role="navigation" style="background-color: #fff;" >
+            
             <div class="sidebar-collapse">
 
 				<?php echo Contexts::render_menu('text', 'normal'); ?>
 				
 			
             </div>
+        
             <!-- /.sidebar-collapse -->
         </nav>
         <!-- /.navbar-static-side -->
 
 		<div style="position: inherit;
-margin: 0 0 0 250px;
+margin: 0 0 0 0px;
 ">
 		<?php echo theme_view('partials/_subnav'); ?>
 	

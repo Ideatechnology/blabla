@@ -9,7 +9,8 @@
 	
    <script src="<?php echo base_url(); ?>assets/ckeditor/ckeditor.js"></script>
 	<script src="<?php echo base_url(); ?>assets/ckfinder/ckfinder.js"></script>
-	
+	 <script src="<?php echo Template::theme_url("js/jasny-bootstrap.min.js");?>"></script>
+  
 
   <?php
 	Assets::add_js( array( 'bootstrap.min.js', 'jwerty.js','plugins/metisMenu/jquery.metisMenu.js','plugins/morris/raphael-2.1.0.min.js'

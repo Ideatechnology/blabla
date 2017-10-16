@@ -15,16 +15,18 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 	<meta name="robots" content="noindex" />
-	<?php echo Assets::css(null, true); ?>
+
 	<link rel="stylesheet" type="text/css" href="<?php echo Template::theme_url('font-awesome/css/font-awesome.css'); ?>" media="screen" />
 	<link rel="stylesheet" type="text/css" href="<?php echo Template::theme_url('css/plugins/morris/morris-0.4.3.min.css'); ?>" media="screen" />
 	<link rel="stylesheet" type="text/css" href="<?php echo Template::theme_url('css/plugins/timeline/timeline.css'); ?>" media="screen" />
 		<link rel="stylesheet" type="text/css" href="<?php echo Template::theme_url('css/plugins/dataTables/dataTables.bootstrap.css'); ?>" media="screen" />
 
 	<link rel="stylesheet" type="text/css" href="<?php echo Template::theme_url('css/sb-admin.css'); ?>" media="screen" />
+	 <link href="<?php echo Template::theme_url("css/jasny-bootstrap.min.css");?>" rel="stylesheet">
+
 
 <link rel="icon" href="<?php echo Template::theme_url("icon/favicon.ico");?>" sizes="16x21" type="image/png">
-   
+   	<?php echo Assets::css(null, true); ?>
 	
 	
 </head>
@@ -45,7 +47,7 @@
 <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+      <button type="button" class="navbar-toggle" data-toggle="offcanvas" data-target=".navmenu">
         <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -54,7 +56,7 @@
      <?php echo anchor( '/', " WEB ".strtoupper(html_escape($this->settings_lib->item('site.title'))), 'class="navbar-brand" target="_blank" style="font-size:14px;"' ); ?>
     </div>
 				
-	 <ul class="nav navbar-nav navbar-right">
+	 <ul class="nav navbar-nav navbar-right hidden-xs">
         <li><a href="<?php echo site_url() ?>" target="_blank"><i class="fa fa-eye fa-fw"></i> Lihat Website</a></li>
             
 		<li class="dropdown ">
@@ -75,3 +77,8 @@
 	</nav><!-- /topbar -->
 
 
+<div class="navmenu navmenu-default navmenu-fixed-left offcanvas" style="z-index: 1031;">
+
+	<?php echo Contexts::render_menu('text', 'normal'); ?>
+			
+</div>

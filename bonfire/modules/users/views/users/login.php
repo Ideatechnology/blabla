@@ -23,7 +23,7 @@
     
 </style>
 <div id="login">
-
+  <?php echo Template::message(); ?>	
 	<?php echo form_open('login', array('autocomplete' => 'off','class'=>'form-signin uk-form',"data-ajax"=>"false")); ?>
  <div class="">
 

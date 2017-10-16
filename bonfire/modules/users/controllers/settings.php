@@ -51,10 +51,12 @@ class Settings extends Admin_Controller
 		
 			Assets::clear_cache();
 		#load js dan css
-		Assets::add_css('flick/jquery-ui-1.8.13.custom.css');
-		Assets::add_js('jquery-ui-1.8.13.min.js');
-			Assets::add_js('jquery-ui-timepicker-addon.js');
-		Assets::add_css('jquery-ui-timepicker.css');
+	
+
+		Assets::add_js(Template::theme_url("plugins/datepicker/bootstrap-datepicker.js"));
+		Assets::add_css(Template::theme_url("plugins/datepicker/datepicker3.css"));
+
+
 				Assets::add_module_js('users', 'js/users.js');
 		
 
@@ -74,7 +76,7 @@ class Settings extends Admin_Controller
 		$this->auth->restrict('Bonfire.Users.Manage');
 
 		// Fetch roles we might want to filter on
-		$roles = $this->role_model->select('role_id, role_name')->where(array('deleted' => 0,"role_id !="=>4,"role_id <>"=>7))->find_all();
+		$roles = $this->role_model->select('role_id, role_name')->where(array('deleted' => 0,"role_id <>"=>7))->find_all();
 		$ordered_roles = array();
 		foreach ($roles as $role)
 		{
@@ -108,7 +110,7 @@ class Settings extends Admin_Controller
 		}
 
 		// Actions done, now display the view
-		$where = array('users.deleted' => 0,"users.role_id !="=>4,"users.role_id <>"=>7);
+		$where = array('users.deleted' => 0,"users.role_id <>"=>7);
 
 		// Filters
 		if (preg_match('{first_letter-([A-Z])}', $filter, $matches))
@@ -562,7 +564,15 @@ class Settings extends Admin_Controller
 		}
 
 		// Compile our core user elements to save.
-        $data = $this->user_model->prep_data($this->input->post());
+        $data2 = $this->user_model->prep_data($this->input->post());
+
+
+        $data1 = array('tanggal_mulai_langganan'		=> $this->input->post('tanggal_mulai'),
+			'tanggal_sampai_langganan'		=> $this->input->post('tanggal_sampai'));
+
+        $data = $data2 + $data1;
+       
+
 
 		if ($type == 'insert') {
 			$activation_method = $this->settings_lib->item('auth.user_activation_method');
@@ -572,6 +582,8 @@ class Settings extends Admin_Controller
 				// Activate the user automatically
 				$data['active'] = 1;
 			}
+
+
 
 			$return = $this->user_model->insert($data);
 			$id = $return;

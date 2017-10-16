@@ -881,7 +881,7 @@ function get_slug_menu_list_footer($parent){
   
   
   //multiple level
-                function generate_menu_multiple($parent)
+                function generate_menu_multiple($parent,$mobile=false)
                 {
 				
 			$ci =& get_instance();
@@ -985,6 +985,9 @@ function get_slug_menu_list_footer($parent){
 							   $link=site_url('post/read/'.date("Y",strtotime($rows->created_on)).'/'.$value->url_posts.'/'.url_title($rows->judul, 'dash'))."/".url_title($value->name,'dash');
 							 endif;
 							
+
+
+							if($mobile==false){
                                 //if this is the first child print '<ul>'
                                 if ($has_childs === false)
                                 {
@@ -995,6 +998,8 @@ function get_slug_menu_list_footer($parent){
                                     echo '<ul class="dropdown-menu" data-role="listview">';
                                   }
                                 }
+
+
                                 
                                 if($value->parent_menu_id == 0 && in_array($value->id, $parentMenuIds))
                                 {
@@ -1032,7 +1037,65 @@ function get_slug_menu_list_footer($parent){
 								  }
                                 }
                                 
-								generate_menu_multiple($value->id);
+                                //mobile
+                                }else{
+
+
+                                	 //if this is the first child print '<ul>'
+                                if ($has_childs === false)
+                                {
+                                  //don't print '<ul>' multiple times  
+                                  $has_childs = true;
+                                  if($parent != 0)
+                                  {
+                                    echo '<ul class="nav navmenu-nav" style="background: rgb(52, 58, 64);">';
+                                  }
+                                }
+
+
+                                
+                                if($value->parent_menu_id == 0 && in_array($value->id, $parentMenuIds))
+                                {
+                                
+								if($value->id_role==0){
+								echo '<li class="parent"><a  href="'. $link.'">' . $value->name . '<b class="caret"></b></a>';
+                                }else{
+									 if($value->id_role==$role){
+									echo '<li class="parent"><a  href="'. $link.'">' . $value->name . '<b class="caret"></b></a>';
+        	
+									 }
+								}
+								
+								}
+                                
+								else if($value->parent_menu_id != 0 && in_array($value->id, $parentMenuIds))
+                                {
+								if($value->id_role==0){
+                                  echo '<li ><a href="'. $link.'">' . $value->name . ' <b class="caret"></b></a>';
+                                }else{
+									if($value->id_role==$role){
+									echo '<li ><a href="'. $link.'">' . $value->name . ' <b class="caret"></b></a>';
+									}
+								}
+								}
+                                
+								else
+                                {
+									if($value->id_role==0){
+                                  echo '<li ><a href="'.$link.'">' . $value->name . '</a>';
+								  }else{
+								  if($value->id_role==$role){
+									 echo '<li><a href="'.$link.'">' . $value->name . '</a>';
+								  }
+								  }
+                                }
+                                
+
+                                }
+
+
+
+								generate_menu_multiple($value->id,$mobile);
                                 
                                 //call function again to generate nested list for subcategories belonging to this category
                                 echo '</li>';

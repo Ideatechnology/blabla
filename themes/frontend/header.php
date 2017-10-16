@@ -3,10 +3,10 @@
     <a class="navmenu-brand" href="#" style="border-bottom:1px solid #706c6c">MENU UTAMA</a>
 
     <ul class="nav navmenu-nav metismenu" id="menu1">
-
+`
     <?php
                 //untuk menampilkan menu top
-                 generate_menu_multiple(0);
+                 generate_menu_multiple(0,true);
             ?>
 
       </ul>
