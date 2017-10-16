@@ -110,10 +110,15 @@ p{
 </div>
 
 <!-- banner iklan -->
+<?php if($iklan1): ?>
 <center>
-<img src="<?php echo Template::theme_url("img/Baner-tengah-ok.gif");?>" class="img-responsive" style="width:100%">
+  <a href="<?php echo $iklan1->link;?>" target="_blank">
+<img src="<?php echo base_url("application/modules/link/files/".$iklan1->file);?>" class="img-responsive" style="width:100%">
+</a>
 </center>
+<?php endif; ?>
 <br />
+
 <div class="row">
 
 <div class="col-md-6">
@@ -366,9 +371,14 @@ p{
 
 
 <!-- banner iklan -->
+<!-- banner iklan -->
+<?php if($iklan2): ?>
 <center>
-<img src="<?php echo Template::theme_url("img/Bnaer-bawah.gif");?>" class="img-responsive" style="width:100%">
+  <a href="<?php echo $iklan2->link;?>" target="_blank">
+<img src="<?php echo base_url("application/modules/link/files/".$iklan2->file);?>" class="img-responsive" style="width:100%">
+</a>
 </center>
+<?php endif; ?>
 
 
 

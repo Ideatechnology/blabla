@@ -267,8 +267,8 @@ class Plugin extends Admin_Controller{
 		$attachment='';
 		$config['upload_path'] = $this->upload_config['upload_path_file_upload'];
 		$config['allowed_types'] = 'jpg|jpeg|png|gif';
-		$config['max_width']  = '1940';
-		$config['max_height']  = '1331';
+		$config['max_size']             = 52428800000;
+              
 		$this->load->library('upload', $config);
 		$this->upload->initialize($config);
 		$upload = $this->upload->do_upload('userfile');

@@ -4,7 +4,7 @@
 $lang['banner_form_link_banner']='Link Banner';
 $lang['banner_form_link_banner_desc']='Contoh: http://www.Indonesia.org';
 $lang['banner_form_image']='Image';
-$lang['banner_form_image_desc']='Upload Images ( 1024 X 1024 px Tipe JPG)';
+$lang['banner_form_image_desc']='Upload Images ( Tipe JPG,PNG,GIF )';
 
 $lang['banner_judul_message']='Harap perbaiki kesalahan berikut:';
 $lang['select_banner']='Pilih banner';

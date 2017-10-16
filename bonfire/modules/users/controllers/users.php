@@ -349,7 +349,7 @@ class Users extends Front_Controller
 			Template::set('page_title', 'Profile User');
 		Template::set_view('users/users/profile');
 		Template::set_block('sidebar', 'produk/sidebarcustomer');
-		Template::render('one_right_custome');	
+		Template::render();	
 
 	}//end profile()
 

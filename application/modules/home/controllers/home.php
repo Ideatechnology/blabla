@@ -94,6 +94,22 @@ class Home extends CI_Controller
 		$slide = $this->slide_model->getSlider(6);
 		Template::set("slide",$slide);
 
+
+		$iklan1 = $this->db->where("tipe","iklan")
+						   ->where("deleted",0)
+						   ->order_by("id","desc")
+						   ->limit(1,0)
+						   ->get("link")->row();
+
+		$iklan2 = $this->db->where("tipe","iklan")
+						   ->where("deleted",0)
+						   ->order_by("id","desc")
+						   ->limit(1,1)
+						   ->get("link")->row();
+
+		Template::set("iklan1",$iklan1);
+		Template::set("iklan2",$iklan2);
+
 		
 		$saripati = $this->post_model->post_categories(103,0,4)->result();
 		Template::set("saripati",$saripati);

@@ -4,7 +4,7 @@
 $lang['slide_form_link_slide']='Link';
 $lang['slide_form_link_slide_desc']='Example: http://djaloe.biz/produk/detail/69/guse-duma-liza-1234 Recomended Link Product';
 $lang['slide_form_image']='Image';
-$lang['slide_form_image_desc']='Upload Images ( 940 X 331 px Tipe JPG,PNG,GIF)';
+$lang['slide_form_image_desc']='Upload Images (  Tipe JPG,PNG,GIF )';
 $lang['slide_form_title_slides']='Title';
 $lang['slide_judul_message']='Please fix the following errors:';
 $lang['slide_judul_form']='Form Link';
